@@ -2,11 +2,11 @@
 * The TicTacToe was implemented in PHP with AJAX calls
 * To run the application you will need the following folder structure - folder TicTacToe_PHP must be present under the htdocs folder
 
-![Cross Before](/docs/design_system/folder_struct_1.jpg)  
+![Folder Structure](/docs/design_system/folder_struct_1.jpg)  
 
 * Under the TicTacToe_PHP folder there are the folder/files required for the application
 
-![Cross Before](/docs/design_system/folder_struct_2.jpg)
+![Subfolder Structure](/docs/design_system/folder_struct_2.jpg)
 
 # _config.php
 * The file loading mechanism is updated accordingly: 

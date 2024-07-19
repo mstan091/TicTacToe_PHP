@@ -23,6 +23,7 @@
 When the game is over - either by one player winning or a tie - click refresh button on the browser to restart it. 
 
 ## Implementation details
-The implementation details are available under the [design_system.md](docs/design_system.md) document. 
+The implementation details are available under the [design_system_assignment2
+.md](docs/design_system_assignment2.md) document. 
 
 
