@@ -62,13 +62,15 @@ class TicTacToe
         $this->winningArray = $indexArray;
         // Update the session and increase the score
         // score is reset in the API
-        $_SESSION["player1"] = $_SESSION["player1"] + 1;
+        
 
         // Reset values after 10 games 
-        if (($_SESSION["player1"] + $_SESSION["player2"] + $_SESSION["draws"]) > 10) {
+        if (($_SESSION["player1"] + $_SESSION["player2"] + $_SESSION["draws"]) >= 10) {
           $_SESSION["player1"] = 1;
           $_SESSION["player2"] = 0;
           $_SESSION["draws"] = 0;
+        } else {
+          $_SESSION["player1"] = $_SESSION["player1"] + 1;
         }
         ;
         return ("circleWon");
@@ -90,11 +92,13 @@ class TicTacToe
       ;
       if ($count === 3) {
         $this->winningArray = $indexArray;
-        $_SESSION["player2"] = $_SESSION["player2"] + 1;
+        
         if (($_SESSION["player1"] + $_SESSION["player2"] + $_SESSION["draws"]) > 10) {
           $_SESSION["player1"] = 0;
           $_SESSION["player2"] = 1;
           $_SESSION["draws"] = 0;
+        } else {
+          $_SESSION["player2"] = $_SESSION["player2"] + 1;
         }
         ;
         return ("crossWon");
@@ -117,11 +121,13 @@ class TicTacToe
       }
       ;
       if ($countFilled === 9) {
-        $_SESSION["draws"] = $_SESSION["draws"] + 1;
+        
         if (($_SESSION["player1"] + $_SESSION["player2"] + $_SESSION["draws"]) > 10) {
           $_SESSION["player1"] = 0;
           $_SESSION["player2"] = 0;
           $_SESSION["draws"] = 1;
+        } else {
+          $_SESSION["draws"] = $_SESSION["draws"] + 1;
         }
         ;
         return ("isDraw");
